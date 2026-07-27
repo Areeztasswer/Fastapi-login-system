@@ -23,9 +23,9 @@ def get_user_service():
     return user_services
 
 
-# =========================
-# PRODUCTS
-# =========================
+
+
+
 
 
 @router.get(
@@ -123,9 +123,7 @@ def delete_product(
     }
 
 
-# =========================
-# USER REGISTRATION
-# =========================
+
 
 
 @router.post("/user")
@@ -137,9 +135,6 @@ def create_user(
     return service.create_user(user)
 
 
-# =========================
-# LOGIN
-# =========================
 
 
 @router.post("/login")
