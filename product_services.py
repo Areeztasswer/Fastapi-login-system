@@ -4,7 +4,7 @@ from models import Product
 from config import product_collection
 
 
-# Get all products
+
 def get_products():
     products = []
 
@@ -14,7 +14,7 @@ def get_products():
     return products
 
 
-# Get a single product by Id
+
 def get_product(id: int):
     product = product_collection.find_one(
         {"Id": id},
@@ -27,13 +27,13 @@ def get_product(id: int):
     return None
 
 
-# Create a new product
+
 def create_product(product: Product):
     product_collection.insert_one(product.model_dump())
     return product
 
 
-# Update an existing product
+
 def update_product(id: int, updated_product: Product):
     result = product_collection.update_one(
         {"Id": id},
