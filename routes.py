@@ -5,8 +5,8 @@ from datetime import timedelta
 
 from models import Product, User
 
- from services import product_services
- from services import user_services
+from services import product_services
+from services import user_services
 
 from security_utilities import create_access_token
 from users import admin_only, admin_or_employee
