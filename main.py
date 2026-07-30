@@ -5,6 +5,8 @@ from routes import router
 import time
 from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],       
@@ -13,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app = FastAPI()
+
 
 
 @app.middleware("http")
